@@ -17,8 +17,16 @@ app = FastAPI()
 
 init_example_user()
 
+# ✅ 定义路由
+# @app.get("/")
+# async def root():
+#     return {"message": "FastAPI backend running!"}
+
 origins = [
-    settings.app_origin,
+    "http://localhost:3000",  # React 本地开发地址
+    "http://127.0.0.1:3000",
+    # 部署后这里再加上线域名，比如：
+    # "https://yourdomain.com",
 ]
 
 app.add_middleware(

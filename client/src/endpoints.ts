@@ -21,6 +21,9 @@ export function login(
             if (response.ok) {
                 response.json().then(data => {
                     setToken(data['access_token'])
+                    localStorage.setItem('token', data.access_token);
+                    // 待设置登录和主页面的路由框架
+                    // navigate('/');
                 })
             } else {
                 onError()

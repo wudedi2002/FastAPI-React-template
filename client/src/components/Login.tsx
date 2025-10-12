@@ -28,12 +28,14 @@ function Login(prop: {
             <input
                 type={"text"}
                 value={username}
+                style={{width: "350px"}}
                 onChange={e => setUsername(e.target.value)}
             />
             <p>Password</p>
             <input
                 type={"password"}
                 value={password}
+                style={{width: "350px"}}
                 onChange={e => setPassword(e.target.value)}
             />
             <br/>
