@@ -6,9 +6,9 @@ import {
   Navigate,
   useNavigate,
 } from "react-router-dom";
-import "./App.css";
-import MyButton from "./components/common/MyButton";
 import AuthForm from "./components/AuthForm";
+import TopBar from "./components/layout/TopBar";
+import Sidebar from "./components/layout/Sidebar";
 
 // ✅ 登录页组件
 function LoginPage({ setToken }: { setToken: (t: string | null) => void }) {
@@ -47,17 +47,21 @@ function HomePage({ setToken }: { setToken: (t: string | null) => void }) {
     }
   }, [token, navigate]);
 
+  const handleNavigate = (path: string) => {
+    navigate(path);
+  };
+
   return (
     <div className="App">
-      <div className="top-bar">
-        <MyButton myLabel={"Logout"} callback={handleLogout} />
+      <TopBar onLogout={handleLogout} />
+      <Sidebar onNavigate={handleNavigate} />
+      <div className="main-content">
+        <h2>Dashboard</h2>
+        <p>You are logged in successfully 🎉</p>
+        <p>
+          JWT token: <code>{token}</code>
+        </p>
       </div>
-      <header className="App-header">
-        <p>You are logged in</p>
-      </header>
-      <p>
-        JWT token: <code>{token}</code>
-      </p>
     </div>
   );
 }
