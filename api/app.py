@@ -8,10 +8,14 @@ from schemas import User, Item
 from settings import Settings
 from auth import set_secret_key, login_for_access_token, Token
 
+from models import init_example_user
+
 settings = Settings()
 
 set_secret_key(settings.secret_key)
 app = FastAPI()
+
+init_example_user()
 
 origins = [
     settings.app_origin,
