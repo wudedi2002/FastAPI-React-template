@@ -12,3 +12,8 @@ Go to the `api` and `client` folders for more information about each part of the
 # 部署
 1. 在`api`目录下运行`uvicorn app:app --reload`启动后端服务
 2. 在`client`目录下运行`npm run build`构建前端静态文件
+
+# 日志
+1. 2025/10/13 基础框架搭好, 待部署宝塔面板
+参考 指纹chrome#001:  
+https://chatgpt.com/c/68eb5e22-d610-8323-8423-6e63ec52013a
