@@ -7,6 +7,7 @@ import {
   useNavigate,
 } from "react-router-dom";
 import AuthForm from "./components/AuthForm";
+import styles from "./App.module.scss";
 import TopBar from "./components/layout/TopBar";
 import Sidebar from "./components/layout/Sidebar";
 
@@ -22,8 +23,8 @@ function LoginPage({ setToken }: { setToken: (t: string | null) => void }) {
   };
 
   return (
-    <div className="login-card">
-      <h2 className="login-title">Sign In</h2>
+    <div className={styles['login-card']}>
+      <h2 className={styles["login-title"]}>Sign In</h2>
       <AuthForm setToken={handleLoginSuccess} />
     </div>
   );
@@ -52,10 +53,10 @@ function HomePage({ setToken }: { setToken: (t: string | null) => void }) {
   };
 
   return (
-    <div className="App">
+    <div className={styles.App}>
       <TopBar onLogout={handleLogout} />
       <Sidebar onNavigate={handleNavigate} />
-      <div className="main-content">
+      <div className={styles['main-content']}>
         <h2>Dashboard</h2>
         <p>You are logged in successfully 🎉</p>
         <p>

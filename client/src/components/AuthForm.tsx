@@ -2,6 +2,7 @@ import React, {useState} from "react";
 import MyButton from "./common/MyButton";
 import Login from "./Login";
 import Signup from "./Signup";
+import styles from "../App.module.scss";
 
 enum Menu {
     LOGIN,
@@ -31,7 +32,7 @@ function AuthForm(prop: {
     }
 
     return (
-        <div>
+        <div className={styles['login-btn']}>
             {menuTitle}
             {buttonSwitchMenu}
             {menuComponent}

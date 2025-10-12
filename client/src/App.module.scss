@@ -1,0 +1,89 @@
+/* 全局样式 */
+body,
+html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: "Inter", "Segoe UI", Roboto, sans-serif;
+  background: linear-gradient(135deg, #e3f2fd, #f9fbe7);
+  color: #333;
+}
+
+/* 登录卡片 */
+.login-card {
+  background: #fff;
+  padding: 2rem 2.5rem;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  max-width: 380px;
+  width: 100%;
+  transition: all 0.3s ease;
+  margin-top: 10%;
+  margin-left: 50%;
+  transform: translateX(-50%);
+}
+
+.login-card:hover {
+  border: #1565c0 solid 1px;
+}
+
+/* 表单标题 */
+.login-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #1976d2;
+  margin-bottom: 1.5rem;
+}
+
+/* 输入框样式 */
+input {
+  width: 100%;
+  padding: 12px 14px;
+  margin: 8px 0;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: all 0.2s ease;
+}
+
+input:focus {
+  outline: none;
+  border-color: #1976d2;
+  box-shadow: 0 0 0 3px rgba(25, 118, 210, 0.15);
+}
+
+/* 按钮样式（重写 MyButton 的通用风格） */
+button {
+  background-color: #1976d2;
+  color: #fff;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 8px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.login-btn :global(button) {
+  margin-left: 50%;
+  transform: translateX(-50%);
+}
+
+button:hover {
+  background-color: #1565c0;
+}
+
+/* ======= 内容区域 ======= */
+.main-content {
+  margin-left: 220px;
+  padding: 2rem;
+  height: 100%;
+  background-color: #f7f9fc;
+}
+
+/* 响应式布局 */
+@media (max-width: 768px) {
+  .main-content {
+    margin-left: 0;
+  }
+}

@@ -1,5 +1,5 @@
 import React from "react";
-import "./Layout.css";
+import styles from "./Layout.module.scss";
 
 interface TopBarProps {
   onLogout: () => void;
@@ -7,13 +7,13 @@ interface TopBarProps {
 
 const TopBar: React.FC<TopBarProps> = ({ onLogout }) => {
   return (
-    <header className="topbar">
-      <div className="topbar-left">
-        <h1 className="app-title">My FastAPI React App</h1>
+    <header className={styles.topbar}>
+      <div className={styles.topbarLeft}>
+        <h1 className={styles['app-title']}>My FastAPI React App</h1>
       </div>
-      <div className="topbar-right">
-        <span className="welcome-text">Welcome 👋</span>
-        <button className="logout-btn" onClick={onLogout}>
+      <div className={styles.topbarRight}>
+        <span className={styles['welcome-text']}>Welcome 👋</span>
+        <button className={styles['logout-btn']} onClick={onLogout}>
           Logout
         </button>
       </div>
