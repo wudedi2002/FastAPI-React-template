@@ -23,6 +23,8 @@ init_example_user()
 #     return {"message": "FastAPI backend running!"}
 
 origins = [
+    "https://tips.happy-zone.top",  # 加上你自己的域名（https）
+    "http://tips.happy-zone.top",   # 兼容 http
     "http://localhost:3000",  # React 本地开发地址
     "http://127.0.0.1:3000",
     # 部署后这里再加上线域名，比如：
